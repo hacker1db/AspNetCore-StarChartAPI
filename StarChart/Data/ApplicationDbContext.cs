@@ -5,10 +5,10 @@ using StarChart.Models;
 namespace StarChart.Data
 {
     public class ApplicationDbContext : DbContext
-    {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+    { 
+        public DbSet<CelestialObjects> CelestialObjects { set; get; }
+        public ApplicationDbContext(DbContextOptions options, DbSet<CelestialObjects> celestialObjects) : base(options)
         {
-            public DbSet<CelastialObject> CelastialObject { set; get; }
         }
     }
 }
