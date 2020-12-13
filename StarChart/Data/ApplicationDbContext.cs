@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Security.Policy;
+using Microsoft.EntityFrameworkCore;
+using StarChart.Models;
 
 namespace StarChart.Data
 {
@@ -6,6 +8,7 @@ namespace StarChart.Data
     {
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
+            public DbSet<CelastialObject> CelastialObject { set; get; }
         }
     }
 }
