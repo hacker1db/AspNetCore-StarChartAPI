@@ -15,6 +15,7 @@ namespace StarChart
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddDbContext<ApplicationDbContext>(
             options => options.UseInMemoryDatabase("StarChart"));
         }

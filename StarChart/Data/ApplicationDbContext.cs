@@ -13,7 +13,6 @@ namespace StarChart.Data
 
         public ApplicationDbContext(DbContextOptions optionsBuilderOptions)
         {
-            throw new System.NotImplementedException();
         }
     }
 }
