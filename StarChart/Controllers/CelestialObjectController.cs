@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using StarChart.Data;
+using StarChart.Models;
 
 namespace StarChart.Controllers
 {
-    public class CelestialObjectController : Controller
+    [Route("")]
+    [ApiController]
+    public class CelestialObjectController : ControllerBase
     {
-        private readonly ApplicationDbContext _applicationDbContext;
+        private readonly ApplicationDbContext _context;
 
         // GET
         [HttpGet]
@@ -15,9 +19,28 @@ namespace StarChart.Controllers
             return new EmptyResult();
         }
 
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return new EmptyResult();
+        }
+
+        [HttpGet]
+        public IActionResult GetById()
+        {
+            return new EmptyResult();
+        }
+
+        [HttpGet]
+        public IActionResult GetByName()
+        {
+            return new EmptyResult();
+        }
+
+
         public CelestialObjectController(ApplicationDbContext applicationDbContext)
         {
-            _applicationDbContext = applicationDbContext;
+            _context = applicationDbContext;
         }
     }
 }
