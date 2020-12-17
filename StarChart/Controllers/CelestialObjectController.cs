@@ -22,19 +22,20 @@ namespace StarChart.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            return new EmptyResult();
+            
+            return Ok();
         }
 
         [HttpGet]
         public IActionResult GetById()
         {
-            return new EmptyResult();
+            return Ok();
         }
 
         [HttpGet]
         public IActionResult GetByName()
         {
-            return new EmptyResult();
+            return Ok();
         }
 
 

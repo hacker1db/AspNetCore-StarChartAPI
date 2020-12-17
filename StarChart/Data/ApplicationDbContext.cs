@@ -14,5 +14,7 @@ namespace StarChart.Data
         public ApplicationDbContext(DbContextOptions optionsBuilderOptions)
         {
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+            => options.UseInMemoryDatabase("StarChart");
     }
 }
